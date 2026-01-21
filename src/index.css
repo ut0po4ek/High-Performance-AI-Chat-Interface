@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --bg-cream: #f4f1e8;
+  --bg-sand: #efe7d6;
+  --ink: #1b2a2f;
+  --ink-muted: #3d4a4f;
+  --accent: #e07a5f;
+  --accent-2: #3d8ea0;
+  --card: rgba(255, 255, 255, 0.78);
+  --card-strong: rgba(255, 255, 255, 0.95);
+  --stroke: rgba(27, 42, 47, 0.12);
+  --code-bg: rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(1200px 600px at 15% 20%, #ffffff 0%, var(--bg-cream) 45%, var(--bg-sand) 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.chat-shell {
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: 26px;
+  backdrop-filter: blur(12px);
+}
+
+.panel-glow {
+  background: radial-gradient(600px 220px at 75% -20%, rgba(224, 122, 95, 0.2), transparent 60%);
+}
+
+.markdown {
+  line-height: 1.65;
+  font-size: 0.98rem;
+  word-break: break-word;
+}
+
+.markdown strong {
+  font-weight: 600;
+  color: inherit;
+}
+
+.markdown pre {
+  background: var(--code-bg);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 16px;
+  padding: 16px;
+  overflow: auto;
+  font-family: "IBM Plex Mono", "SFMono-Regular", ui-monospace, monospace;
+  font-size: 0.85rem;
+  color: #1f2937;
+}
+
+.markdown code {
+  font-family: "IBM Plex Mono", "SFMono-Regular", ui-monospace, monospace;
+  font-size: 0.86rem;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(27, 42, 47, 0.2);
+  border-radius: 999px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
